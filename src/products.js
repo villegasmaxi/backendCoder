@@ -91,6 +91,6 @@ class ProductManager {
     }
 }
 
-const productManager = new ProductManager("data/productos.json");
+const productManager = new ProductManager("../data/productos.json");
 
 export default productManager;
