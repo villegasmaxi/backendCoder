@@ -1,8 +1,9 @@
 import fs from "fs";
 
 class ProductManager {
-    constructor() {
-        this.path = process.cwd()+ '/data/productos.json';
+    constructor(filePath) {
+        this.path = filePath;
+        //this.path = process.cwd()+ '/data/productos.json';
         this.products = [];
         this.nextId = 1;
         this.loadProducts();
@@ -89,6 +90,7 @@ class ProductManager {
         }
     }
 }
-//export default ProductManager;
-const productManager = new ProductManager();
+
+const productManager = new ProductManager("data/productos.json");
+
 export default productManager;
